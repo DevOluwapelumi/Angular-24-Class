@@ -1,10 +1,19 @@
-<h1>
+<h1 style="text-align: center;">
   Hello, Welcome DevOluwaPelumi
 </h1>
 
 <div>{{firstname}}</div>
 <div>{{address}}</div>
 <div>{{email}}</div>
+
+<div>{{obj1.lastname}}</div>
+
+<div>{{mixedArray}}</div>
+
+<div *ngFor="let obj of array3, let i=index">
+  <button class="btn btn-outline-secondary" (click)="checkindex(i)">Check</button>
+<p>{{obj.name}}</p>
+</div>
 
 
 <router-outlet></router-outlet>
