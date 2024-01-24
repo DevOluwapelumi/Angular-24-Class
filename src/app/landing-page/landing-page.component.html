@@ -1,5 +1,7 @@
 <!-- Sign Up Section -->
 <div class="container">
+  <a routerLink="/dashboard/deposit" class="nav nav-link">Home</a>
+  <a routerLink="/dashboard/deposit" class="nav nav-link">Dashboard</a>
     <div class="row">
         <div class="col-6 shadow">
             <div class="text-center">
@@ -27,41 +29,18 @@
                 <button class="btn btn-success" (click)="addContact()">Add User</button>
             </div>
         </div>
+        <div class="col-6 shadow">
+          <div class="row my-2" *ngFor="let contact of contactArray, let i=index">
+          <div class="col-3 my-2">
+            <div>{{contact.firstname}}</div>
+          </div>
+          <div class="col-3">
+            <button class="btn btn-info">View</button>
+          </div>
+          <div class="col-2 btn btn-danger w-25" (click)="del(i)">Delete</div>
+          <div class="col-2 btn btn-success w-25">Edit</div>
+        </div>
+        </div>
     </div>
 </div>
 
-<!-- User List Section -->
-<div class="container mt-3">
-    <h2>User List</h2>
-  
-    <table class="table">
-      <thead>
-        <tr>
-          <th>S/N</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Phone Number</th>
-          <th>Address</th>
-          <th>Gender</th>
-          <th>Email</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let contact of contactArray; let i = index">
-          <td>{{ i + 1 }}</td>
-          <td>{{ contact.firstname }}</td>
-          <td>{{ contact.lastname }}</td>
-          <td>{{ contact.phonenumber }}</td>
-          <td>{{ contact.address }}</td>
-          <td>{{ contact.gender }}</td>
-          <td>{{ contact.email }}</td>
-          <td>
-            <button (click)="editContact(i)">Edit</button>
-            <button (click)="deleteContact(i)">Delete</button>
-            <button (click)="viewContact(i)">View</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-</div>

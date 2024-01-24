@@ -3,6 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { FooterComponent } from './footer/footer.component';
+import { AllNewBlogComponent } from './all-new-blog/all-new-blog.component';
+import { CultureBlogComponent } from './culture-blog/culture-blog.component';
+import { BussinessBlogComponent } from './bussiness-blog/bussiness-blog.component';
+import { LifestyleBlogComponent } from './lifestyle-blog/lifestyle-blog.component';
 
 interface Objectname{
   firstname: string,
@@ -21,7 +28,7 @@ interface Objectname3{
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingPageComponent, FormsModule],
+  imports: [CommonModule, RouterOutlet, LandingPageComponent, FormsModule, NavBarComponent, CarouselComponent, FooterComponent, AllNewBlogComponent, CultureBlogComponent, BussinessBlogComponent, LifestyleBlogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
