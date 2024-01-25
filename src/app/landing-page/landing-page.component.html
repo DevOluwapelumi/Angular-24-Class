@@ -35,12 +35,18 @@
             <div>{{contact.firstname}}</div>
           </div>
           <div class="col-3">
-            <button class="btn btn-info">View</button>
+            <button class="btn btn-info" [routerLink]="['/contact-details', i]">View</button>
           </div>
-          <div class="col-2 btn btn-danger w-25" (click)="del(i)">Delete</div>
-          <div class="col-2 btn btn-success w-25">Edit</div>
+          <div class="col-3 btn btn-danger w-25" (click)="del(i)">Delete</div>
+          <div class="col-3 btn btn-success w-25">Edit</div>
         </div>
         </div>
     </div>
 </div>
+
+<app-contact-details [selectedContact]="selectedContact"></app-contact-details>
+<!-- <app-contact-details [selectedContact]="selectedContact" [selectedIndex]="selectedIndex" (contactUpdated)="updateContacts($event)"></app-contact-details> -->
+
+
+
 

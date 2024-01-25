@@ -9,9 +9,10 @@ import { AllNewBlogComponent } from './all-new-blog/all-new-blog.component';
 import { CultureBlogComponent } from './culture-blog/culture-blog.component';
 import { BussinessBlogComponent } from './bussiness-blog/bussiness-blog.component';
 import { LifestyleBlogComponent } from './lifestyle-blog/lifestyle-blog.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 export const routes: Routes = [
-    {path:'home', component:LandingPageComponent},
+    {path:'', component:LandingPageComponent},
     {path:'nav', component:NavBarComponent},
     {path:'caro', component:CarouselComponent},
     {path:'foot', component:FooterComponent},
@@ -19,11 +20,13 @@ export const routes: Routes = [
     {path:'culture', component:CultureBlogComponent},
     {path:'bussiness', component:BussinessBlogComponent},
     {path:'lifestyle', component:LifestyleBlogComponent},
+    {path:'details', component:ContactDetailsComponent},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
         {path:'', component:DisplayContactComponent},
         {path:'deposit', component:LandingPageComponent},
     ]},
+    { path: 'contact-details/:id', component:ContactDetailsComponent },
     {path:'display/:name', component:DisplayContactComponent},
     {path:'**', component:ErrorPageComponent},
 ];

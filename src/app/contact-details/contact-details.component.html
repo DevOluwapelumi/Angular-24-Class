@@ -1,0 +1,75 @@
+<div class="container" *ngIf="selectedContact">
+  <h6 class="text-info text-center">User Details</h6>
+  <div class="row">
+    <div class="col-12 mx-auto">
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <th scope="row">First Name</th>
+            <td>{{ selectedContact.firstname }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Last Name</th>
+            <td>{{ selectedContact.lastname }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Phone Number</th>
+            <td>{{ selectedContact.phonenumber }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Address</th>
+            <td>{{ selectedContact.address }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Gender</th>
+            <td>{{ selectedContact.gender }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td>{{ selectedContact.email }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Action</th>
+            <td>
+              <button class="btn btn-secondary" (click)="edit('updatedContact')">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Contact Modal -->
+<div class="modal fade" id="editContactModal" tabindex="-1" aria-labelledby="editContactModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editContactModalLabel">Edit Contact</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form for editing contact -->
+        <form #editForm="ngForm">
+          <!-- Add form fields similar to your add contact form, but bind them to the selectedContact object -->
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="selectedContact.firstname" name="firstname" placeholder="First Name">
+            <input type="text" class="form-control" [(ngModel)]="selectedContact.lastname" name="firstname" placeholder="Last Name">
+            <input type="text" class="form-control" [(ngModel)]="selectedContact.phonenumber" name="firstname" placeholder="Phonenumber">
+            <input type="text" class="form-control" [(ngModel)]="selectedContact.address" name="firstname" placeholder="Address">
+            <input type="text" class="form-control" [(ngModel)]="selectedContact.gender" name="firstname" placeholder="Gender">
+            <input type="text" class="form-control" [(ngModel)]="selectedContact.email" name="firstname" placeholder="Email">
+          </div>
+          <!-- ... other fields ... -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+        <button type="button" class="btn btn-primary" (click)="updateContact()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-contact-details [selectedContact]="selectedContact" [selectedIndex]="selectedIndex"></app-contact-details> -->
+
