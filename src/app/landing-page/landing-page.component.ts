@@ -22,7 +22,7 @@ interface contactInterface{
 })
 export class LandingPageComponent implements OnInit {
 
-  // public selectedIndex: number | null = null;
+  public selectedIndex: number | null = null;
 
 
   public first_name=''
@@ -66,7 +66,7 @@ export class LandingPageComponent implements OnInit {
 
   view(i: number) {
     this.selectedContact = this.contactArray[i];
-    // this.selectedIndex = i;
+    this.selectedIndex = i;
   }
 
 
@@ -80,8 +80,8 @@ export class LandingPageComponent implements OnInit {
       console.error("Error updating contacts in localStorage", error);
     }
   }
-// updateContacts(updatedContacts: any[]) {
-//   this.contactArray = updatedContacts;
-// }
+updateContacts(updatedContacts: any[]) {
+  this.contactArray = updatedContacts;
+}
 
 }

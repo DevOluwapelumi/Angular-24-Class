@@ -37,7 +37,7 @@ edit(updatedContact: any) {
     localStorage.setItem('contacts', JSON.stringify(contacts));
 
     // Optionally, emit an event to notify the parent component to update its contact array
-    // this.contactUpdated.emit(contacts);
+    this.contactUpdated.emit(contacts);
   }
 }
   updateContact() {
@@ -47,8 +47,8 @@ edit(updatedContact: any) {
     // ...
 
     // Close the modal after updating
-    // const editModal = new bootstrap.Modal(document.getElementById('editContactModal'));
-    // editModal.hide();
+    const editModal = new bootstrap.Modal(document.getElementById('editContactModal'));
+    editModal.hide();
   }
   closeModal() {
     // Using Bootstrap's modal JavaScript API to hide the modal
