@@ -1,11 +1,11 @@
 <!-- Sign Up Section -->
 <div class="container">
-  <a routerLink="/dashboard/deposit" class="nav nav-link">Home</a>
-  <a routerLink="/dashboard/deposit" class="nav nav-link">Dashboard</a>
-    <div class="row">
-        <div class="col-6 shadow">
+  <a routerLink="/dashboard/deposit" class="nav nav-link">Home|</a>
+  <a routerLink="/dashboard/deposit" class="nav nav-link">Dashboard|</a>
+    <div class="row ms-5">
+        <div class="col-3 shadow">
             <div class="text-center">
-                <h6 class="text-info">Sign Up</h6>
+                <h6 class="text-info">Create Contact</h6>
             </div>
             <div class="col-10 mx-auto">
                 <div class="form-group">
@@ -29,7 +29,7 @@
                 <button class="btn btn-success" (click)="addContact()">Add User</button>
             </div>
         </div>
-        <div class="col-6 shadow">
+        <div class="col-3 shadow">
           <div class="row my-2" *ngFor="let contact of contactArray, let i=index">
           <div class="col-3 my-2">
             <div>{{contact.firstname}}</div>
@@ -37,8 +37,8 @@
           <div class="col-3">
             <button class="btn btn-info" [routerLink]="['/contact-details', i]">View</button>
           </div>
-          <div class="col-3 btn btn-danger w-25" (click)="del(i)">Delete</div>
-          <div class="col-3 btn btn-success w-25">Edit</div>
+          <div class="col-3">
+          <button class="btn btn-danger" (click)="del(i)">Delete</button>
         </div>
         </div>
     </div>

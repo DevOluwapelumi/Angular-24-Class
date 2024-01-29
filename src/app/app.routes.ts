@@ -10,6 +10,7 @@ import { CultureBlogComponent } from './culture-blog/culture-blog.component';
 import { BussinessBlogComponent } from './bussiness-blog/bussiness-blog.component';
 import { LifestyleBlogComponent } from './lifestyle-blog/lifestyle-blog.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ServiceComponent } from './service/service.component';
 
 export const routes: Routes = [
     {path:'', component:LandingPageComponent},
@@ -21,6 +22,7 @@ export const routes: Routes = [
     {path:'bussiness', component:BussinessBlogComponent},
     {path:'lifestyle', component:LifestyleBlogComponent},
     {path:'details', component:ContactDetailsComponent},
+    {path:'service', component:ServiceComponent},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
         {path:'', component:DisplayContactComponent},

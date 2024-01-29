@@ -115,19 +115,44 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Open and close the search form.
    */
-  const searchOpen = document.querySelector('.js-search-open');
-  const searchClose = document.querySelector('.js-search-close');
-  const searchWrap = document.querySelector(".js-search-form-wrap");
+  // const searchOpen = document.querySelector('.js-search-open');
+  // const searchClose = document.querySelector('.js-search-close');
+  // const searchWrap = document.querySelector(".js-search-form-wrap");
 
-  searchOpen.addEventListener("click", (e) => {
-    e.preventDefault();
-    searchWrap.classList.add("active");
-  });
+  // searchOpen.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   searchWrap.classList.add("active");
+  // });
 
-  searchClose.addEventListener("click", (e) => {
-    e.preventDefault();
-    searchWrap.classList.remove("active");
+  // searchClose.addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   searchWrap.classList.remove("active");
+  // });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchOpen = document.querySelector('.js-search-open'); // Adjust the selector as needed
+    const searchClose = document.querySelector('.js-search-close'); // Adjust the selector as needed
+    const searchWrap = document.querySelector('.js-search-form-wrap'); // Adjust the selector as needed
+  
+    if (searchOpen) {
+      searchOpen.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (searchWrap) {
+          searchWrap.classList.add('active');
+        }
+      });
+    }
+  
+    if (searchClose) {
+      searchClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (searchWrap) {
+          searchWrap.classList.remove('active');
+        }
+      });
+    }
   });
+  
 
   /**
    * Initiate glightbox
