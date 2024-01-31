@@ -31,7 +31,7 @@
           <tr>
             <th scope="row">Action</th>
             <td>
-              <button class="btn btn-secondary" (click)="edit('updatedContact')">Edit</button>
+              <!-- <button class="btn btn-secondary" (click)="edit('updatedContact')">Edit</button> -->
             </td>
           </tr>
         </tbody>
@@ -41,7 +41,7 @@
 </div>
 
 <!-- Edit Contact Modal -->
-<div class="modal fade" id="editContactModal" tabindex="-1" aria-labelledby="editContactModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="editContactModal" tabindex="-1" aria-labelledby="editContactModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -49,18 +49,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <!-- Form for editing contact -->
         <form #editForm="ngForm">
-          <!-- Add form fields similar to your add contact form, but bind them to the selectedContact object -->
           <div class="form-group">
-            <!-- <input type="text" class="form-control" [(ngModel)]="selectedContact.firstname" name="firstname" placeholder="First Name"> -->
             <input type="text" class="form-control" [(ngModel)]="selectedContact.lastname" name="firstname" placeholder="Last Name">
             <input type="text" class="form-control" [(ngModel)]="selectedContact.phonenumber" name="firstname" placeholder="Phonenumber">
             <input type="text" class="form-control" [(ngModel)]="selectedContact.address" name="firstname" placeholder="Address">
             <input type="text" class="form-control" [(ngModel)]="selectedContact.gender" name="firstname" placeholder="Gender">
             <input type="text" class="form-control" [(ngModel)]="selectedContact.email" name="firstname" placeholder="Email">
           </div>
-          <!-- ... other fields ... -->
         </form>
       </div>
       <div class="modal-footer">
@@ -69,7 +65,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- <app-contact-details [selectedContact]="selectedContact" [selectedIndex]="selectedIndex"></app-contact-details> -->
 

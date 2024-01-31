@@ -11,6 +11,11 @@ import { BussinessBlogComponent } from './bussiness-blog/bussiness-blog.componen
 import { LifestyleBlogComponent } from './lifestyle-blog/lifestyle-blog.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { ServiceComponent } from './service/service.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { SettingsComponent } from './settings/settings.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { studentGuard } from './guards/student.guard';
 
 export const routes: Routes = [
     {path:'', component:LandingPageComponent},
@@ -22,6 +27,9 @@ export const routes: Routes = [
     {path:'bussiness', component:BussinessBlogComponent},
     {path:'lifestyle', component:LifestyleBlogComponent},
     {path:'details', component:ContactDetailsComponent},
+    {path:'up', component:SignUpComponent},
+    {path:'in', component:SignInComponent},
+    {path:'board', component:DashBoardComponent },
     {path:'service', component:ServiceComponent},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
@@ -31,4 +39,8 @@ export const routes: Routes = [
     { path: 'contact-details/:id', component:ContactDetailsComponent },
     {path:'display/:name', component:DisplayContactComponent},
     {path:'**', component:ErrorPageComponent},
+    {path: 'dashboard', children:[
+        {path:'', component:DashBoardComponent},
+        {path:'settings', component:SettingsComponent}
+    ], canActivate: [studentGuard]},
 ];
