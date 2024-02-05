@@ -16,6 +16,7 @@ import { SettingsComponent } from './settings/settings.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { studentGuard } from './guards/student.guard';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 export const routes: Routes = [
     {path:'', component:LandingPageComponent},
@@ -30,7 +31,8 @@ export const routes: Routes = [
     {path:'up', component:SignUpComponent},
     {path:'in', component:SignInComponent},
     {path:'board', component:DashBoardComponent },
-    {path:'service', component:ServiceComponent},
+    {path:'board', component:DashBoardComponent },
+    {path:'driven', component:TemplateDrivenFormComponent},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
         {path:'', component:DisplayContactComponent},

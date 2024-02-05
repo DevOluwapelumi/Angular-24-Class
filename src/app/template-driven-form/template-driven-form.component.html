@@ -1,0 +1,58 @@
+<div class="px-5 py-5">
+    <div class="card col-md-4 mx-auto">
+        <h1 class="text-center text-primary">Template Driven Form</h1>
+      <div class="card-body">
+        <form #form="ngForm">
+        <div *ngIf="message" class="mt-3">
+          </div>
+        <div class="form-group mb-2">
+          <label class="form-label">First Name</label>
+          <input class="form-control" type="text" [(ngModel)]="firstname" placeholder="Enter your first name" name="firstname" class="form-control my-2" [(ngModel)]="firstname" placeholder="Enter your first name" #fname="ngModel" required [class.is-valid]="fname.valid && fname.touched" [class.is-invalid]="fname.invalid && fname.dirty" minlength="5" />
+          <div *ngIf="fname.invalid && fname.touched">
+          <span class="text-center text-danger" *ngIf="fname?.errors?.['required']">This field is required</span>
+          <span class="text-center text-danger" *ngIf="fname?.errors?.['minlength']">The minimum length required is 5</span>
+        </div>
+        </div>
+
+        <div class="form-group mb-2">
+            <label class="form-label">Last Name</label>
+            <input type="text" class="form-control" [(ngModel)]="lastname" name="lastname" placeholder="Enter your last name" #lname="ngModel" required [class.is-valid]="lname.valid && lname.touched" [class.is-invalid]="lname.invalid && lname.dirty">
+            <div *ngIf="lname.invalid && lname.touched">
+              <span class="text-danger" *ngIf="lname.errors?.['required']">This field is required</span>
+            </div>
+            </div>
+          
+          <div class="form-group mb-2">
+            <label class="form-label">Email</label>
+            <input class="form-control" type="email" [(ngModel)]="email" name="email" class="form-control my-2" placeholder="Enter your email" #mail="ngModel" required email [class.is-valid]="mail.valid && mail.touched" [class.is-invalid]="mail.invalid && mail.dirty">
+            <div *ngIf="mail.invalid && mail.touched">
+              <span class="text-center text-danger" *ngIf="mail?.errors?.['required']">This field is required</span>
+              <span class="text-center text-danger" *ngIf="mail?.errors?.['email']">Please enter a valid email address</span>
+            </div>
+            </div>
+          
+          <div class="form-group mb-2">
+            <label class="form-label">Password</label>
+            <input class="form-control" type="password" [(ngModel)]="password" name="password" class="form-control my-2" minlength="8" maxlength="12" placeholder="Enter your password" #pass="ngModel" required [class.is-valid]="pass.valid && pass.touched" [class.is-invalid]="pass.invalid && pass.dirty">
+            <div *ngIf="pass.invalid && pass.touched">
+              <span class="text-center text-danger" *ngIf="pass?.errors?.['required']">This field is required</span>
+              <span class="text-center text-danger" *ngIf="pass?.errors?.['minlength']">Password must be at least 8 characters long</span>
+              <span class="text-center text-danger" *ngIf="pass?.errors?.['maxlength']">Password cannot be more than 12 characters long</span>
+            </div>
+            </div>
+          
+          <div class="form-group mb-2">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" [(ngModel)]="age" name="age" class="form-control my-2" placeholder="Enter your age" #old="ngModel" min="1" [class.is-valid]="old.valid && old.touched" [class.is-invalid]="old.invalid && old.dirty">
+            <div *ngIf="old.invalid && old.touched">
+              <span class="text-center text-danger" *ngIf="old.errors?.['min']">Age must be greater than 0</span>
+            </div>
+            </div>
+          
+        <div class="d-grid">
+          <button class="btn btn-primary" (click)="onSubmit()"  [disabled]="!form.valid">SignUp</button>
+        </div>
+    </form>     
+      </div>
+    </div>
+  </div>
