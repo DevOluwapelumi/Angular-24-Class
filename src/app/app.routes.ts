@@ -17,6 +17,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { studentGuard } from './guards/student.guard';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 export const routes: Routes = [
     {path:'', component:LandingPageComponent},
@@ -33,6 +34,7 @@ export const routes: Routes = [
     {path:'board', component:DashBoardComponent },
     {path:'board', component:DashBoardComponent },
     {path:'driven', component:TemplateDrivenFormComponent},
+    {path:'react', component:ReactiveFormComponent},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
         {path:'', component:DisplayContactComponent},
