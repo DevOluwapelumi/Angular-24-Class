@@ -10,5 +10,5 @@ import { BehaviourChild2Component } from '../behaviour-child2/behaviour-child2.c
   styleUrl: './behaviour-subject-parent.component.css'
 })
 export class BehaviourSubjectParentComponent {
-
+  
 }

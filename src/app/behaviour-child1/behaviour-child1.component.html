@@ -1,1 +1,12 @@
 <p>behaviour-child1 works!</p>
+
+<div>
+    <div class="shadow" *ngFor="let list of behavior_array" (click)="sendlist(list)">
+        <div class="my-4 p-5" style="cursor: pointer;">
+            <p>{{list.firstname}}</p>
+            <p>{{list.lastname}}</p>
+            <p>{{list.age}}</p>
+            <p>{{list.email}}</p>
+        </div>
+    </div>
+</div>
