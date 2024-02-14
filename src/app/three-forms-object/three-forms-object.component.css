@@ -1,0 +1,17 @@
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
