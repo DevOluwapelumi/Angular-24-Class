@@ -1,2 +1,58 @@
-<p>pipe works!</p>
-<p>{{'Agriculture'}}</p>
+<div class="container mt-3 text-primary">
+  <p class="text-uppercase">hello</p>
+  <p class="text-lowercase">HELLO</p>
+  <p>{{time}}</p>
+  <p class="fw-bold">{{time | date:'short'}}</p>
+  <p class="text-muted">{{time | date:'full'}}</p>
+  <p>{{time | date:'medium'}}</p>
+  <p>{{time | date:'long'}}</p>
+  <p>{{time | date:'shortTime'}}</p>
+  <p>{{time | date:'fullTime'}}</p>
+  <p>{{time | date:'longTime'}}</p>
+  <p>{{time | date:'shortDate'}}</p>
+  <p>{{time | date:'fullDate'}}</p>
+  <p>{{time | date:'longDate'}}</p>
+  <p>{{time | date:'d/M/Y'}}</p>
+  <p>{{'Agriculture' | slice:4:11}}</p>
+  <p>{{'Investment' | slice:2:6}}</p>
+  <p>{{'Information' | slice:0:2}}</p>
+  <p>{{'Information' | slice:2:5}}</p>
+  <p>{{'Information' | slice:0:6}}</p>
+  <p>{{'Information' | slice:2:8}}</p>
+  <p>{{'Information' | slice:3:5}}</p>
+  <p>{{'Information' | slice:8:11}}</p>
+  <p>{{'Information' | slice:5:8}}</p>
+  <p>{{'Information' | slice:9:11}}</p>
+  <p>{{'Information' | slice:2:6}}</p>
+  <p>{{'Information' | slice:0:5}}</p>
+  <p>{{'Information' | slice:2:11}}</p>
+  <p>{{'Information' | slice:6:8}}</p>
+  <p>{{4056780 | currency: 'USD' : 'symbol-narrow'}}</p>
+  <p>{{4056780 | currency: 'EUR' : 'code'}}</p>
+  <p>{{4056780 | currency: 'NGN' : 'symbol-narrow'}}</p>
+  <p>{{4056780 | currency: 'BTC':'symbol-narrow'}}</p>
+  <p>{{2/4 | percent}}</p>
+</div>
+
+
+<!-- <p>{{0.978 | number:'4.1-2'}}</p> -->
+
+
+
+<!-- <div *ngIf="name">
+    <div>This is true</div>
+</div>
+
+
+<div [ngSwitch]="'hello'">
+    <div *ngSwitchCase="'hello'">This is the hello div</div>
+    <div *ngSwitchCase="'hi'">This is not the hello div</div>
+    <div *ngSwitchDefault="">None</div>
+</div>
+<div>
+<div [ngClass]="condition">
+    <div *ngSwitchCase="color1">This is the red color</div>
+    <div *ngSwitchCase="color2">This is the blue color</div>
+</div>
+<button (click)="changeColor()">Change Color</button>
+</div> -->
