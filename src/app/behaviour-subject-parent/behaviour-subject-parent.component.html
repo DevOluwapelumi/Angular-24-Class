@@ -1,3 +1,40 @@
+<div class="container mt-5" >
+    <h2 class="text-center">Registration Form</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-4 shadow">
+            <form (ngSubmit)="submitRegistration()">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="firstName" name="firstName" placeholder="Enter first name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="lastName" name="lastName" placeholder="Enter last name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Enter email">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select class="form-control" [(ngModel)]="gender" name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 <div class="container-fluid mt-5">
     <div class="text-center text-primary shadow p-3 mb-5 bg-white rounded">
         <h5>This is the Subject_Behavior_Parent Component!</h5>

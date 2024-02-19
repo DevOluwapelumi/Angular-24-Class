@@ -20,6 +20,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ThreeFormsObjectComponent } from './three-forms-object/three-forms-object.component';
 import { BehaviourSubjectParentComponent } from './behaviour-subject-parent/behaviour-subject-parent.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 export const routes: Routes = [
     {path:'', component:LandingPageComponent},
@@ -39,6 +40,7 @@ export const routes: Routes = [
     {path:'react', component:ReactiveFormComponent},
     {path:'three', component:ThreeFormsObjectComponent},
     {path:'behaviour', component:BehaviourSubjectParentComponent},
+    {path:'pipe', component:PipeComponent},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
         {path:'', component:DisplayContactComponent},

@@ -10,13 +10,13 @@ import { BehaviourService } from '../services/behaviour.service';
 })
 export class BehaviourChild2Component {
   constructor(public behavior:BehaviourService){}
-  public behavior_obj:any={}
+  // public behavior_obj:any={}
 
-  ngOnInit(){
-    this.behavior.behavior.subscribe(response=>{
-      this.behavior_obj=response
-      console.log(this.behavior_obj);
-    })
+  // ngOnInit(){
+  //   this.behavior.behavior.subscribe(response=>{
+  //     this.behavior_obj=response
+  //     console.log(this.behavior_obj);
+  //   })
     
-  }
+  // }
 }
