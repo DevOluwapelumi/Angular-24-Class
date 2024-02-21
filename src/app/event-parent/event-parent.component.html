@@ -1,0 +1,15 @@
+<p>event-parent works!</p>
+<div class="container">
+    <div class="col-5 mx-auto shadow p-5">
+        <h1 class="text-success">This is the parent component</h1>
+        <input type="text" [(ngModel)]="text" class="form-control">
+        <button class="btn btn-primary" (click)="send()">Send</button>
+    </div>
+    <div>receiver: {{data}}</div>
+</div>
+
+<div class="container">
+    <div class="col-5 mx-auto shadow mt-5">
+        <app-event-child [receivetext]="newtext" (eventemit)="receiveResponse($event)"><app-event-child>
+
+

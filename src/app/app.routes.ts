@@ -21,6 +21,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { ThreeFormsObjectComponent } from './three-forms-object/three-forms-object.component';
 import { BehaviourSubjectParentComponent } from './behaviour-subject-parent/behaviour-subject-parent.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { EventParentComponent } from './event-parent/event-parent.component';
 
 export const routes: Routes = [
     {path:'', component:LandingPageComponent},
@@ -41,6 +42,8 @@ export const routes: Routes = [
     {path:'three', component:ThreeFormsObjectComponent},
     {path:'behaviour', component:BehaviourSubjectParentComponent},
     {path:'pipe', component:PipeComponent},
+    {path:'event', component:EventParentComponent},
+    // {path:'event2', component:},
     {path:'home', redirectTo:'', pathMatch:'full'},
     {path:'dashboard', children:[
         {path:'', component:DisplayContactComponent},
