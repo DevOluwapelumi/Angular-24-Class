@@ -1,18 +1,13 @@
 <p>event-parent works!</p>
-<!-- Parent Component -->
 <div class="container">
     <div class="col-md-6 mx-auto shadow p-5 mb-5 bg-white rounded">
-        <h1 class="text-success">This is the parent component</h1>
-        <input type="text" [(ngModel)]="text" class="form-control" placeholder="Enter your message">
-        <button class="btn btn-primary mt-2" (click)="send()">Send</button>
+        <h1 class="text-success text-center">This is the parent component</h1>
+        <div class="d-flex">
+            <input type="text" [(ngModel)]="text" class="form-control mr-2" placeholder="Enter your message">
+            <button class="btn btn-primary" (click)="send()">Send</button>
+        </div>
+        <div class="alert alert-info mt-2">Receiver: {{data}}</div>
     </div>
-    <div class="alert alert-info">Receiver: {{data}}</div>
 </div>
 
-<div class="container">
-    <div class="col-5 mx-auto shadow mt-5">
-        <app-event-child [receivetext]="newtext" (eventemit)="receiveResponse($event)"><app-event-child>
-
-
-
-
+<app-event-child [receivetext]="newtext" (eventemit)="receiveResponse($event)"></app-event-child>
