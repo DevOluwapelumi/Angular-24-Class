@@ -1,11 +1,17 @@
-<p>event-child works!</p>
-<div class="text-primary">
-    <div class="mx-auto col-5 shadow">
-        <h1 class="text-success">This is the child component</h1>
-    <div>{{receivetext}}</div>
+<!-- Child Component -->
+<div class="container">
+    <div class="col-md-6 mx-auto shadow mt-5 p-5 bg-light rounded">
+        <h2 class="text-primary">Child Component</h2>
+        <p>Received text: {{receivetext}}</p>
+        
+        <!-- Additional content or logic here -->
+        
+        <!-- Response Section -->
+        <div class="mt-4">
+            <input type="text" [(ngModel)]="sendResponse" class="form-control my-2" placeholder="Type your response...">
+            <button class="btn btn-primary" (click)="send()">Send</button>
+        </div>
+    </div>
 </div>
-    <div class="shadow mx-auto col-5"></div>
-    <input type="text" [(ngModel)]="sendResponse" class="form-control my-2">
-    <button class="btn btn-primary" (click)="send()">Send</button>
-</div>
+
 
